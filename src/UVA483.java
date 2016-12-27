@@ -9,10 +9,7 @@ public class UVA483 {
 		{
 			
 			String s=sc.nextLine();
-			if(s.equals("exit"))
-			{
-				break;
-			}
+
 			StringTokenizer st=new StringTokenizer(s);
 			while(st.hasMoreTokens())
 			{
