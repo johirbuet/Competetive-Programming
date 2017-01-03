@@ -36,6 +36,7 @@ public class UVA11340 {
         out.print(sb.toString());
         out.flush();
         out.close();
+        sc.close();
     }
    
 
