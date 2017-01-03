@@ -2,7 +2,7 @@
 public class UVA146 {
 
 	// C++ provides succint solution
-	#include<cstdio>
+	/*#include<cstdio>
 	#include<cstring>
 	#include<algorithm>
 	 
@@ -18,5 +18,5 @@ public class UVA146 {
 	        }
 	    }
 	    return 0;
-	} 
+	} */
 }
