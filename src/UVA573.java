@@ -33,6 +33,7 @@ public class UVA573 {
 			if(success) System.out.println("success on day " + sum);
 			else System.out.println("failure on day " + sum);
 		}
+		sc.close();
 		
 	}
 
