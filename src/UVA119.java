@@ -42,5 +42,6 @@ public class UVA119 {
 			}
 			
 		}
+		sc.close();
 	}
 }
