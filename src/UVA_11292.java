@@ -64,6 +64,7 @@ public class UVA_11292 {
 				System.out.println("Loowater is doomed!");
 			}
 		}
+		sc.close();
 	}
 
 }
