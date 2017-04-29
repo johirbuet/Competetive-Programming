@@ -29,6 +29,7 @@ public class UVA_10347 {
 				System.out.printf("%.3f\n",s);
 			}
 		}
+		sc.close();
 	}
 
 }
