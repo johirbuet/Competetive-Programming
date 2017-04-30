@@ -62,6 +62,7 @@ public class UVA_499 {
 			System.out.print(list.get(i));	
 			}
 			System.out.println(" "+max);
+			
 		}
 		sc.close();
 	}
