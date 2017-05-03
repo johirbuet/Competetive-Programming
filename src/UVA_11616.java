@@ -10,11 +10,6 @@ public class UVA_11616 {
 		for(int i=0;i<romans.length;i++){
 			map.put(romans[i], arabic[i]);
 		}
-		
-		HashMap<Integer, String> map2 =new HashMap<>();
-		for(int i=0;i<romans.length;i++){
-			map2.put(arabic[i], romans[i]);
-		}
 		Scanner sc = new Scanner(System.in);
 		while(sc.hasNextLine())
 		{
