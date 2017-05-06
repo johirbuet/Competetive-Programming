@@ -26,6 +26,7 @@ public class UVA_12136 {
 				System.out.printf("Case %d: Hits Meeting\n",c);
 			}
 		}
+		sc.close();
 		
 	}
 	

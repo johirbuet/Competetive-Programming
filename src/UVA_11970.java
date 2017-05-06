@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 
 public class UVA_11970 {
@@ -11,16 +12,24 @@ public class UVA_11970 {
 		{
 			int n =sc.nextInt();
 			ArrayList<Integer> list = new ArrayList<>();
-			for(int j= 1;j<n;j++)
+			int qn = (int) Math.sqrt(n);
+			for(int j= qn;j>=1;j--)
 			{
-				if(j%Math.sqrt(n-j) ==0 && j/Math.sqrt(n-j) >0){
-					list.add(j);
+				int x = n -j*j;
+				if(x %j ==0 && x>0)
+				{
+					list.add(x);
 				}
 			}
+			Collections.sort(list);
 			System.out.printf("Case %d: ",c);
-			for(int a :list)
+			for(int s=0; s<list.size();s++)
 			{
-				System.out.print(a+" ");
+				System.out.print(list.get(s));
+				if(s<list.size()-1)
+				{
+					System.out.print(" ");
+				}
 			}
 			System.out.println();
 			c++;
