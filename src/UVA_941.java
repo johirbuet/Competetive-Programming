@@ -1,41 +1,38 @@
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.Scanner;
 import java.util.TreeSet;
 
 public class UVA_941 {
-	public static long factorial(int n) {
-        long res = 1;
-        for (int i = 2; i <= n; i++)
-            res *= i;
-        return res;
-    }
-
-    public static String nThPermutation(String s, long n) {
-        char[] arr = s.toCharArray();
-        Arrays.sort(arr);
-        StringBuilder sb = new StringBuilder(new String(arr));
-        String res = "";
-        while (n != 0) {
-            int k = (int) (n / factorial(sb.length() - 1));
-            long mod = n % factorial(sb.length() - 1);
-            res = res + sb.charAt(k);
-            sb.deleteCharAt(k);
-            n = mod;
-        }
-        return res + sb;
-    }
-
-    public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        int TC = in.nextInt();
-        while (TC-- > 0) {
-            String s = in.next();
-            long n = in.nextLong();
-            char[] arr = s.toCharArray();
-            Arrays.sort(arr);
-            System.out.println(nThPermutation(new String(arr), n));
-        }
-    }
+	public static void main(String[] args) {
+		Scanner sc =new Scanner(System.in);
+		int T = Integer.parseInt(sc.nextLine());
+		while(T-->0){
+			String str =sc.nextLine();
+			char [] c =str.toCharArray();
+			Arrays.sort(c);
+			str =new String(c);
+			long N =Long.parseLong(sc.nextLine());
+			StringBuilder sb =new StringBuilder(str);
+			ArrayList<Integer> factoradic =new ArrayList<>();
+			int i =1;
+			while(N>=0){
+				factoradic.add((int)(N%i));
+				N =N/i;
+				i++;
+			}
+			String res ="";
+			Collections.reverse(factoradic);
+			for(int j=0;j<factoradic.size();j++){
+				res = res + sb.charAt(factoradic.get(j));
+				sb = sb.deleteCharAt(factoradic.get(j));
+			}
+			
+			res =res +sb.toString();
+			System.out.println(res);
+		}
+		sc.close();
+	}
 }
