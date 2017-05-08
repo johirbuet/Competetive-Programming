@@ -9,27 +9,23 @@ public class UVA_11850 {
 			if(n==0){
 				break;
 			}
-			int a [] =new int[n+2];
-			a[0] = 0;
-			a[n+1] = 1422;
-			for(int i=1;i<n-1;i++){
+			int a [] =new int[n];
+			for(int i=0;i<n;i++){
 				a[i] =sc.nextInt();
 			}
 			Arrays.sort(a);
-			int prev = a[0];
 			boolean ok =true;
 			for(int i=1;i<n;i++){
-				int dif = Math.abs(a[i] -prev);
+				int dif = Math.abs(a[i] -a[i-1]);
 				if(dif>200)
 				{
 					ok =false;
 					break;
 				}
-				prev = a[i];
 			}
-			if(a[n-1]-a[n-2] > 100)
+			if(1422-a[n-1]>100)
 			{
-				ok = false;
+				ok =false;
 			}
 			if(ok){
 				System.out.println("POSSIBLE");
