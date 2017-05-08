@@ -46,6 +46,7 @@ public class UVA_11777 {
 				System.out.printf("Case %d: %s\n",c,"F");
 			}
 		}
+		sc.close();
 	}
 
 }
