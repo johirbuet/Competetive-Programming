@@ -4,6 +4,7 @@ import java.util.Scanner;
 /*
  * It will get TLE as the run time is O(n!)
  */
+
 public class UVA_11076 {
 	public static void main(String[] args) {
 		Scanner sc =new Scanner(System.in);
