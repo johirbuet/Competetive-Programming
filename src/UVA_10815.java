@@ -1,28 +1,35 @@
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
 import java.util.Scanner;
 import java.util.TreeSet;
 
 public class UVA_10815 {
-	public static void main(String[] args) {
-		Scanner sc =new Scanner(System.in);
-		TreeSet<String> set =new TreeSet<>();
-		while(sc.hasNextLine()){
-			String s =sc.nextLine().toLowerCase();
-			if(s.equals("0")){
-				break;
-			}
-			s =s.replaceAll("[^a-z]", " ");
-			String [] str =s.split("\\s+");
-			
-			
-			for (String string : str) {
-				set.add(string);
-			}
-		}
-		sc.close();
-		
-		for (String string : set) {
-			System.out.println(string);
-			
-		}
-	}
+	public static void main(String[] args) throws Exception {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        PrintWriter pw = new PrintWriter(System.out);
+        String line;
+        TreeSet<String> set = new TreeSet<String>();
+        while ((line = br.readLine()) != null) {
+            StringBuilder sb = new StringBuilder();
+            char[] c = line.toCharArray();
+            for (int i = 0; i < line.length(); i++) {
+                if ((c[i] >= 'a' && c[i] <= 'z') || (c[i] >= 'A' && c[i] <= 'Z')) {
+                    sb.append(c[i]);
+                } else if (sb.length() > 0) {
+                    set.add(sb.toString().toLowerCase());
+                    sb = new StringBuilder();
+                }
+            }
+            if (sb.length() > 0) {
+                set.add(sb.toString().toLowerCase());
+            }
+        }
+        for (String s : set) {
+            pw.println(s);
+        }
+        pw.flush();
+        pw.close();
+        br.close();
+    }
 }
