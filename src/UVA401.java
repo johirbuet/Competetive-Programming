@@ -2,7 +2,6 @@ import java.util.HashMap;
 import java.util.Scanner;
 
 public class UVA401 {
-
 	public static HashMap<Character, Character> hm = new HashMap<Character, Character>();
 	public static void main(String[] args) {
 		hm.put('A', 'A');
