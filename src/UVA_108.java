@@ -20,7 +20,7 @@ public class UVA_108 {
 		int maxsum = Integer.MIN_VALUE;
 		for(int i=0;i<N;i++){
 			int [] kij = new int[N];
-			for(int j = i;j<N;j++){
+			for(int j = i;j<N-1;j++){
 				for(int k=0;k<N;k++){
 					kij[k] = a[j+1][k]-a[i][k];
 				}
